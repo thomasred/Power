@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_welc_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/welcom_device_page"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_welc_device" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnfan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fan" />
+
+                <Button
+                    android:id="@+id/btncomputer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computer" />
+
+                <Button
+                    android:id="@+id/btnair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aircon" />
+
+                <Button
+                    android:id="@+id/btnlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/light" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollView_ibtns"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="37dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/imageBtn_fan"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/scrollView_ibtns"
+            android:layout_alignLeft="@+id/imageBtn_air"
+            android:scaleType="centerInside"
+            android:src="@drawable/van" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_light"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/scrollView_ibtns"
+            android:layout_alignLeft="@+id/imageBtn_compu"
+            android:scaleType="centerInside"
+            android:src="@drawable/tablelight" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_air"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/scrollView_ibtns"
+            android:layout_below="@+id/horizontalScrollView1"
+            android:layout_marginTop="69dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/air" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_compu"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/imageBtn_air"
+            android:layout_toRightOf="@+id/text_welc_device"
+            android:scaleType="centerInside"
+            android:src="@drawable/compu" />
+
+        <TextView
+            android:id="@+id/text_name_airconditioner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageBtn_compu"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="17dp"
+            android:text="@string/aircon"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/text_name_computer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_name_airconditioner"
+            android:layout_toRightOf="@+id/text_welc_device"
+            android:text="@string/computer"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/text_name_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_name_fan"
+            android:layout_alignBottom="@+id/text_name_fan"
+            android:layout_alignLeft="@+id/imageBtn_light"
+            android:text="@string/light"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/text_name_fan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageBtn_fan"
+            android:layout_alignRight="@+id/imageBtn_fan"
+            android:layout_marginBottom="18dp"
+            android:text="@string/fan"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,270 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4f8e6"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_homepage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/welcome_home_page"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageView
+                        android:id="@+id/imageV_fan"
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/text_homepage"
+                        android:src="@drawable/grrenhouse" />
+
+                    <TextView
+                        android:id="@+id/text_home_volt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/imageV_fan"
+                        android:layout_marginRight="36dp"
+                        android:text="@string/voltage"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/text_home_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageV_fan"
+                        android:layout_alignRight="@+id/text_home_volt"
+                        android:text="@string/current"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <ImageButton
+                        android:id="@+id/imageBtn_refresh"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/refresh" />
+					<Button
+                        android:id="@+id/btn_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/imageBtn_refresh"
+                        android:text="Show chart" />
+					
+                    <TextView
+                        android:id="@+id/text_home_power"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/text_home_current"
+                        android:layout_centerVertical="true"
+                        android:text="@string/power"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/text_all_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/text_home_volt"
+                        android:layout_below="@+id/text_home_power"
+                        android:layout_marginTop="40dp"
+                        android:text="@string/cost"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_welc_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/welcom_device_page"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_welc_device" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnfan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fan" />
+
+                <Button
+                    android:id="@+id/btncomputer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computer" />
+
+                <Button
+                    android:id="@+id/btnair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wash" />
+
+                <Button
+                    android:id="@+id/btnlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/light" />
+
+                <Button
+                    android:id="@+id/btnwash2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wash2" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollView_ibtns"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="37dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/imageBtn_fan"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/scrollView_ibtns"
+            android:layout_alignLeft="@+id/imageBtn_air"
+            android:scaleType="centerInside"
+            android:src="@drawable/van" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_light"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/scrollView_ibtns"
+            android:layout_alignLeft="@+id/imageBtn_compu"
+            android:scaleType="centerInside"
+            android:src="@drawable/tablelight" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_air"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/scrollView_ibtns"
+            android:layout_below="@+id/horizontalScrollView1"
+            android:layout_marginTop="69dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/air" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_compu"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/imageBtn_air"
+            android:layout_toRightOf="@+id/text_welc_device"
+            android:scaleType="centerInside"
+            android:src="@drawable/compu" />
+
+        <TextView
+            android:id="@+id/text_name_airconditioner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageBtn_compu"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="17dp"
+            android:text="@string/aircon"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/text_name_computer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_name_airconditioner"
+            android:layout_toRightOf="@+id/text_welc_device"
+            android:text="@string/computer"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/text_name_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_name_fan"
+            android:layout_alignBottom="@+id/text_name_fan"
+            android:layout_alignLeft="@+id/imageBtn_light"
+            android:text="@string/light"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/text_name_fan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageBtn_fan"
+            android:layout_alignRight="@+id/imageBtn_fan"
+            android:layout_marginBottom="18dp"
+            android:text="@string/fan"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

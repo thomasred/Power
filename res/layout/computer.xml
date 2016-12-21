@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4f8e6"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/text_homepage" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnfan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fan" />
+
+            <Button
+                android:id="@+id/btncomputer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/computer" />
+
+            <Button
+                android:id="@+id/btnair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aircon" />
+
+            <Button
+                android:id="@+id/btnlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/light" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageBtn_refresh"
+        android:background="#000000"
+        android:text="@string/device"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+    <ImageButton
+        android:id="@+id/imageBtn_refresh"
+        android:layout_width="70px"
+        android:layout_height="120px"
+        android:layout_above="@+id/horizontalScrollView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/refresh" />
+
+    <TextView
+        android:id="@+id/text_computer_volt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageV_computer"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/imageBtn_refresh"
+        android:text="@string/voltage"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageV_computer"
+        android:layout_width="200px"
+        android:layout_height="180px"
+        android:layout_below="@+id/horizontalScrollView1"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/compu" />
+
+    <Button
+        android:id="@+id/btnhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_computer_volt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:text="@string/home" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageV_computer" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/imageBtn_fan"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/van" />
+
+            <ImageButton
+                android:id="@+id/imageBtn_light"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/tablelight" />
+
+            <ImageButton
+                android:id="@+id/imageBtn_air"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/air" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/text_computer_curr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageV_computer"
+        android:layout_toLeftOf="@+id/imageBtn_refresh"
+        android:text="@string/current"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
